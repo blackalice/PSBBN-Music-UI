@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.inter-label {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Double the width to allow for seamless looping */
+  height: 100%;
+  background-image: url('/public/bg.jpg');
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  animation: slideBackground 60s linear infinite;
+}
+
+
+
+@keyframes slideBackground {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  letter-spacing: 6px;
+  font-style: normal;
+  -moz-osx-font-smoothing: grayscale;
+  height:100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.galaxy-background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.grid-item {
+  border-radius: 1px;
+  box-shadow:
+    0 0 0 1px #d6dffc,
+    0 0 0 2px #8298ed,
+    0 0 0 2px rgba(59, 130, 246, 0.5),
+	0 0 10px 5px rgba(59, 130, 246, 0.7),
+    inset 0 0 20px 2px rgba(59, 130, 246, 0.7);
+}
